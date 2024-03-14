@@ -1,0 +1,116 @@
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+
+}
+body { 
+    width: 100%;
+	height: 100vh;
+	/* background-image: url(th\ \(1\).jpg); */
+    font-family: 'Roboto', sans-serif;
+    background: url(th\ \(1\).jpg) ;
+    background-attachment: fixed;
+	background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center
+	
+}
+#question{
+	font-size: 25px;
+    color: black;
+	left: 21%;
+	padding: 20px;
+	text-align: center;
+    width: 60%;
+    /* margin-bottom: 30px; */
+    position: relative;
+    background:  rgb(224, 224, 148) ;
+    border-radius: 32px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .7);
+    
+	
+
+}
+.container h1{
+	text-align: center;
+	padding: 5%;
+    color: #FFF;
+    font-size: 80px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+}
+.quiz {
+	display: flex;
+	flex-direction: column;
+   }
+    
+
+.btn{
+    margin: 82px;
+    
+
+    font-size: 40px;
+    color: black;
+	left: 21%;
+    width: 20%;
+	text-align: center;
+    background:  #f9f9f9 ;
+    border-radius: 32px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .7);
+}
+
+#home{
+    float: left;
+    width: 100%;
+    display: none;
+    min-height: 380px;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+.quiz-name{
+    text-align: center;
+	padding: 5%;
+    color: #FFF;
+    font-size: 50px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+}
+
+.quiz-image{
+    max-width: 100%;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 150px;
+}
+.quiz-description{
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .25);
+    display: inline-block;
+    width: 60%;
+    color: #FFF;
+    left: 21%;
+	padding: 20px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.Commencer{
+    margin: 4%;
+    padding: 1%;
+    font-size: 40px;
+    color: black;
+    width: 20%;
+	text-align: center;
+    background:  #f9f9f9 ;
+    border-radius: 32px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .7);
+    left: 35%;
+    position: absolute;
+    
+}
+    
+    
