@@ -137,3 +137,77 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+@media only screen and (max-width: 768px) {
+    .quiz-name {
+        font-size: 40px;
+    }
+
+    .quiz-image {
+        width: 150px;
+    }
+
+    .quiz-description {
+        width: 80%;
+        left: 10%;
+        font-size: 18px;
+    }
+
+    .Commencer {
+        font-size: 30px;
+        width: 40%;
+    }
+
+    .quiz-image {
+        width: 150px;
+    }
+
+    .quiz-description {
+        width: 80%;
+        left: 10%;
+        font-size: 18px;
+    }
+
+    .Commencer {
+        font-size: 30px;
+        width: 40%;
+    }
+
+    .quiz-name {
+        font-size: 40px;
+    }
+
+    .quiz-image {
+        width: 150px;
+    }
+
+    .quiz-description {
+        width: 80%;
+        left: 10%;
+        font-size: 18px;
+    }
+
+    .Commencer {
+        font-size: 30px;
+        width: 40%;
+    }
+
+    .btn {
+        font-size: 30px;
+        width: 50%;
+    }
+
+    .next {
+        font-size: 22px;
+        width: 30%;
+    }
+
+    .container h1 {
+        font-size: 50px;
+    }
+
+    .question-container {
+        font-size: 20px;
+        width: 80%;
+        left: 10%;
+    }
+}

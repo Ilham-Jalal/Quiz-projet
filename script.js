@@ -16,6 +16,7 @@ const myQuestions = [
       { text: "relative", isCorrect: false },
       { text: "static", isCorrect: true }
     ]
+
   },
   {
     id: 2,
@@ -69,30 +70,65 @@ function displayQuestion(id) {
 
 
 let currentQuestion = 0;
-displayQuestion(currentQuestion);
-
+let answered = false; 
 
 responsesContainer.addEventListener("click", function (event) {
-  const selectedButton = event.target;
-  const selectedResponse = myQuestions[currentQuestion].responses[selectedButton.dataset.index];
+  if (!answered) { 
+    const selectedButton = event.target;
+    const selectedResponse = myQuestions[currentQuestion].responses[selectedButton.dataset.index];
 
-  if (selectedResponse.isCorrect) {
-    selectedButton.style.backgroundColor = "green";
-    scores += 10;
-    scor.textContent = scores;
-  } else {
-    selectedButton.style.backgroundColor = "red";
+    if (selectedResponse.isCorrect) {
+      selectedButton.style.backgroundColor = "green";
+      scores += 10;
+      scor.textContent = scores;
+    } else {
+      selectedButton.style.backgroundColor = "red";
+    }
+
+    
+    const allButtons = document.querySelectorAll(".btn");
+    allButtons.forEach(button => {
+      button.disabled = true;
+    });
+
+    answered = true; 
+
+    submit_btn.style.display = "block";
   }
 });
 
 function nextQuestion() {
-  currentQuestion++;
-  if (currentQuestion < myQuestions.length) {
-    displayQuestion(currentQuestion);
-  } else {
-    endQuiz();
+  if (answered) { 
+    currentQuestion++;
+    if (currentQuestion < myQuestions.length) {
+      displayQuestion(currentQuestion);
+      submit_btn.style.display = "none";
+    } else {
+      endQuiz();
+    }
   }
 };
+
+function displayQuestion(id) {
+  const question = myQuestions[id];
+  questionContainer.textContent = question.question;
+  responsesContainer.innerHTML = "";
+
+  question.responses.forEach((reponse, index) => {
+    const button = document.createElement("button");
+    button.textContent = reponse.text;
+    button.classList.add("btn");
+    button.dataset.index = index;
+    responsesContainer.appendChild(button);
+  });
+
+  answered = false;
+}
+
+submit_btn.addEventListener("click", () => {
+  nextQuestion();
+});
+
 
 function endQuiz() {
   questionContainer.textContent = "Bravo, vous avez terminé le quiz !";
