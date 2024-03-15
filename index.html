@@ -12,17 +12,22 @@
     <div class="app">
         <div class="container">
             <h1>SIMPLE QUIZ</h1>
-            <div class="quiz">
-                <p id="question"> Quel mot-clé est utilisé pour déclarer une méthode en Java ? </p>
+            <div id="quiz">
+            </div>
+            <div class="question-container" id="question">
+                Question goes here.
+            </div>
                 <div id="reponses">
-                    <button class="btn"> function </button>
-                    <button class="btn"> method   </button>
-                    <button class="btn">   void   </button>
+                    <button class="btn" id="a">reponse1</button>
+                    <button class="btn" id="b">reponse2</button>
+                    <button class="btn" id="c">reponse3</button>
                 </div>
-
         </div>
         </div>
-
-    </div>    
+        <div class="navigateur">
+            <button class="next">Next</button>
+          </div>
+    </div> 
+    <script src="script.js"></script>   
 </body>
 </html>
