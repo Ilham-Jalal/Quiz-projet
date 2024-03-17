@@ -135,10 +135,22 @@ function endQuiz() {
   responsesContainer.innerHTML = "";
   submit_btn.style.display = "none";
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   displayQuestion(currentQuestion);
 });
+
+function resetQuiz() {
+  scores = 0;
+  currentQuestion = 0;
+  answered = false;
+  scor.textContent = scores;
+  displayQuestion(currentQuestion);
+  submit_btn.style.display = "none";
+}
+const btnRecommencer = document.getElementById('btnRecommencer');
+    btnRecommencer.addEventListener('click', resetQuiz);
+
+
 
 submit_btn.addEventListener("click", () => {
   nextQuestion();
